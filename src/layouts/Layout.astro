@@ -1,25 +1,48 @@
-<!--TODO: delete me later-->
-
+---
+import "../styles/global.css";
+import { Home } from '../components/Home';
+import { Footer } from '../components/Footer';
+---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Winona Raiders</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+    <!--<head>-->
+    <!--    <meta charset="UTF-8" />-->
+    <!--    <meta name="viewport" content="width=device-width" />-->
+    <!--    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />-->
+    <!--    <meta name="generator" content={Astro.generator} />-->
+    <!--    <title>Winona Raiders</title>-->
+    <!--</head>-->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+        <title>Winona Raiders</title>
+    </head>
+    <body>
+    <div class="bg-[#333333] text-white">
+        <!--<button class="flex align-middle ml-6 hover:cursor-pointer" onclick="window.location.href = 'https://www.instagram.com/winona_raiders/'">-->
+        <!--    <img class="mx-2 h-10 w-10" alt="instagram link" src="../img/icons/instagram_logo.png"/>-->
+        <!--</button>-->
+        <div class="flex flex-row justify-center items-center">
+            <h1 class="ml-6 mt-1 mb-3 text-center uppercase text-3xl font-[Verdana] font-medium">Ultimate Frisbee Mödling</h1>
+            <div class="flex ml-6 mt-1 mb-3 items-center">
+                <a class="h-10 w-10 mx-2" href="https://www.instagram.com/winona_raiders/">
+                    <img class="h-10 w-10" alt="instagram link" src="/instagram_logo.png"/>
+                </a>
+            </div>
+        </div>
+        <!--TODO: NavBar-->
+        <nav class="flex w-full items-center justify-around text-center uppercase text-[0.9rem] font-[Verdana]">
+            <a class="flex-1 mx-3 my-1 focus:bg-[#666666]" href="/">Home</a>
+            <a class="flex-1 mx-3 my-1" href="/training">Training</a>
+            <a class="flex-1 mx-3 my-1" href="/juniors">Juniors</a>
+            <a class="flex-1 mx-3 my-1" href="/impressum">Impressum</a>
+        </nav>
+    </div>
+        <main>
+            <slot />
+        </main>
+        <Footer client:visible />
+    </body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
