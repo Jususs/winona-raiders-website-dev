@@ -1,8 +1,7 @@
-//TODO: fix footer img bg
 
 export const Footer = () => {
     return (
-        <div className="font-bold from-black to-white">
+        <div className="bg-[#333333]">
             <div className="flex justify-center text-center">
                 <img
                     src="/support_bar_township_moedling.png"
