@@ -29,14 +29,14 @@ const navLinks = [
 
             <div class="flex ml-6 mt-1 mb-3 items-center">
                 <a class="h-10 w-10 mx-2" href="https://www.instagram.com/winona_raiders/">
-                    <Image height={256} width={256} loading="eager" alt="instagram link" src="/instagram_logo.png"/>
+                    <Image height={40} width={40} loading="eager" alt="instagram link" src="/instagram_logo.png"/>
                 </a>
             </div>
         </div>
 
         <nav class="flex w-full items-center justify-around text-center uppercase text-[0.9rem] font-raiders">
             {navLinks.map(({ label, href }) => (
-                <a href={href} class={`flex-1 p-3 focus:bg-[#666666] ${currentPath === href ? 'underline underline-offset-5' : ''}`}>
+                <a href={href} class={`flex-1 p-3 hover:text-white ${currentPath === href ? 'underline underline-offset-5 text-white' : 'text-gray-400'}`}>
                     { label }
                 </a>
             ))}
