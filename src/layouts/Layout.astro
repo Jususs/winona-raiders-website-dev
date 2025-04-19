@@ -1,6 +1,15 @@
 ---
 import "../styles/global.css";
-import { Footer } from '../components/Footer';
+import Footer  from '../components/Footer.astro';
+
+const currentPath = Astro.url.pathname;
+
+const navLinks = [
+    { label: 'Home', href: '/' },
+    { label: 'Training', href: '/training' },
+    { label: 'Juniors', href: '/juniors' },
+    { label: 'Impressum', href: '/impressum' }
+];
 ---
 
 <!doctype html>
@@ -23,17 +32,18 @@ import { Footer } from '../components/Footer';
                 </a>
             </div>
         </div>
-        <!--TODO: NavBar ripple effect + underline current page link .... focus:bg-[#666666] is placeholder-->
+
         <nav class="flex w-full items-center justify-around text-center uppercase text-[0.9rem] font-raiders">
-            <a class="flex-1 p-3 focus:bg-[#666666]" href="/">Home</a>
-            <a class="flex-1 p-3 focus:bg-[#666666]" href="/training">Training</a>
-            <a class="flex-1 p-3 focus:bg-[#666666]" href="/juniors">Juniors</a>
-            <a class="flex-1 p-3 focus:bg-[#666666]" href="/impressum">Impressum</a>
+            {navLinks.map(({ label, href }) => (
+                <a href={href} class={`flex-1 p-3 focus:bg-[#666666] ${currentPath === href ? 'underline underline-offset-5' : ''}`}>
+                    { label }
+                </a>
+            ))}
         </nav>
     </div>
         <main class="flex flex-col grow">
             <slot />
         </main>
-        <Footer client:visible />
+        <Footer />
     </body>
 </html>
