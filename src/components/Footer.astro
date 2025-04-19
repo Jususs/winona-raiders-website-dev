@@ -1,13 +1,9 @@
 ---
-
+import { Image } from "astro:assets";
 ---
 
 <div class="bg-[#333333]">
     <div class="flex justify-center text-center">
-        <img
-                src="/support_bar_township_moedling.png"
-                alt="support banner township moedling"
-                class="h-[60px] w-[424px] my-2"
-        ></img>
+        <Image class="my-2" height={60} width={424} loading="lazy" alt="support banner township moedling" src="/support_bar_township_moedling.png"/>
     </div>
 </div>
