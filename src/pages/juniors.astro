@@ -1,3 +1,50 @@
 ---
-
+import Layout from "../layouts/Layout.astro";
+import Carousel from '../components/Carousel.tsx';
 ---
+
+<!--TODO: Add Carousel - make it dynamic to show privateer images here-->
+<!--TODO: Email an klingt schlecht lieber "Schreib uns eine Mail/...-->
+
+<Layout>
+    <div class="flex grow flex-auto bg-[url(/Home_bg.jpg)] bg-cover">
+        <div class="flex flex-col w-full px-6 pb-14 bg-[#cfe8fc80]">
+            <Carousel client:load />
+            <div class="max-w-[800px] mt-8 p-6 self-center text-white font-raiders bg-[#000000b3]">
+                <h6 class="pt-6 text-xl font-medium">
+                    Privateers
+                </h6>
+                <p class="my-3">
+                    Die Privateers trainieren seit 2017 in Mödling und hat sich
+                    seitdem zweimal den Titel Vize-Staatsmeister verdient. In Mödling
+                    hat das Jugend Team die Möglichkeit von Coaches zu lernen, die
+                    selbst einmal in diversen Nationalteams gespielt haben.
+                    <br/>
+                    <br/>
+                    Die Privateers laden hiermit alle Junginteressent:innen ein mit uns
+                    mit zu trainieren. Im Training wirst du die Grundlagen des Spiels
+                    und der Würfe kennenlernen, außerdem wirst du deine ersten
+                    Erfahrungen in einem richtigen Ultimate Frisbee Spiel sammeln
+                    können.
+                    <br/>
+                    <br/>
+                    Das solltest du nicht vergessen bevor du zu uns ins
+                    Training kommst:
+                </p>
+                <ol class="list-decimal list-inside pl-3 space-y-3">
+                    <li>Trinkflasche</li>
+                    <li>Stoppelschuhe</li>
+                    <li>Weißes und schwarzes Sport-Shirt</li>
+                    <li>Email an
+                        <a href="mailto:info@winonaraiders.org" class="underline text-cyan-500 hover:text-cyan-700 visited:text-purple-600">
+                            info@winonaraiders.org
+                        </a>
+                    </li>
+                </ol>
+                <p class="mt-5">
+                    Auf geht's - Pack alles zusammen und schreib uns, wir sehen uns im Training!
+                </p>
+            </div>
+        </div>
+    </div>
+</Layout>
