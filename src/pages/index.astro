@@ -1,20 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Carousel from '../components/Carousel.astro';
+import Carousel from '../components/Carousel.tsx';
 ---
 <!--TODO: add styles for slider + gallery images-->
-<!--TODO: add gallery images-->
-<!--TODO: add slider-->
-<!--TODO: add bar below navbar indicating that you are currently on home - have selected white others grayed out a bit-->
+<!--TODO: add slider + gallery images-->
+<!--TODO: navbar have selected white others grayed out a bit-->
 <!--TODO: remove spaces from mail address-->
+<!--TODO: HAVE EVERY SUBPAGE START AT SAME HEIGHT (BLACK CONTAINER eg. like trainingsplätze & impressum etc) -->
 <Layout>
-    <div class="flex grow flex-auto bg-[url(../img/Home_bg.jpg)] bg-cover">
-        <div class="flex flex-col w-full px-6 pb-4 bg-[#cfe8fc80]">
-            <div class="max-w-[800px] max-h-[250px] mb-16 self-center">
-                <!--Slider here-->
-                <!--<Carousel />-->
-            </div>
-            <div class="max-w-[800px] p-6 self-center text-white font-raiders bg-[#000000b3]">
+    <div class="flex grow flex-auto bg-[url(/Home_bg.jpg)] bg-cover">
+        <div class="flex flex-col w-full px-6 pb-14 bg-[#cfe8fc80]">
+            <Carousel client:load />
+            <div class="max-w-[800px] mt-8 p-6 self-center text-white font-raiders bg-[#000000b3]">
                 <p class="my-3">
                     Wir sind ein 1995 gegründetes Ultimate Frisbee Team aus Mödling.
                     Unsere gut 40 aktiven Mitglieder vereint die Begeisterung am Sport
