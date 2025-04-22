@@ -1,6 +1,7 @@
 ## Tech Stack
 
 Astro, React and Tailwind
+Keenslider for the carousel
 
 
 ## 🧞 Commands
