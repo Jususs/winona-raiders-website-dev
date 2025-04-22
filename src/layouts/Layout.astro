@@ -3,12 +3,13 @@ import "../styles/global.css";
 import Footer  from '../components/Footer.astro';
 
 const currentPath = Astro.url.pathname;
+const { base } = Astro;
 
 const navLinks = [
-    { label: 'Home', href: '/' },
-    { label: 'Training', href: '/training' },
-    { label: 'Juniors', href: '/juniors' },
-    { label: 'Impressum', href: '/impressum' }
+    { label: 'Home', href: `${base}/` },
+    { label: 'Training', href: `${base}/training` },
+    { label: 'Juniors', href: `${base}/juniors` },
+    { label: 'Impressum', href: `${base}/impressum` }
 ];
 ---
 
