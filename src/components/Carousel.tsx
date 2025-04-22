@@ -1,6 +1,6 @@
-import {useKeenSlider} from "keen-slider/react"
+import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
-import React, {useEffect, useState} from "react";
+import { useState } from "react";
 
 type imageLocationProps = {
     folder: 'gallery' | 'juniors';
@@ -26,7 +26,7 @@ export default function Carousel({folder}: imageLocationProps) {
         folder === 'gallery' ? galleryImports : juniorImports
     ) as string[];
 
-    const [currentSlide, setCurrentSlide] = React.useState(0);
+    const [currentSlide, setCurrentSlide] = useState(0);
     const [loaded, setLoaded] = useState(false);
     const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>(
         {
@@ -78,14 +78,14 @@ export default function Carousel({folder}: imageLocationProps) {
 
     return (
         <>
-            <div className="w-full max-w-[800px] h-[250px] mb-2 self-center">
+            <div className="w-full max-w-[800px] h-[350px] mb-2 self-center">
                 {!loaded && images.length > 0 && (
                     <img
                         src={images[0]}
                         alt="Carousel placeholder"
                         className="w-full h-full object-cover"
                         width={800}
-                        height={250}
+                        height={350}
                         loading="lazy"
                         draggable={false}
                     />
@@ -103,7 +103,7 @@ export default function Carousel({folder}: imageLocationProps) {
                                 alt={`Slide ${idx + 1}`}
                                 className="w-full h-full object-cover"
                                 width={800}
-                                height={250}
+                                height={350}
                                 loading="lazy"
                                 draggable={false}
                             />
