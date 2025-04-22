@@ -21,7 +21,7 @@ export default function Carousel({folder}: imageLocationProps) {
             query: '?url'
         }
     );
-    // TODO: make ^ less of a code duplication
+
     const images = Object.values(
         folder === 'gallery' ? galleryImports : juniorImports
     ) as string[];
