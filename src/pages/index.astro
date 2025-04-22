@@ -2,11 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Carousel from '../components/Carousel.tsx';
 ---
-<!--TODO: add styles for slider + gallery images-->
-<!--TODO: add slider + gallery images-->
-<!--TODO: navbar have selected white others grayed out a bit-->
-<!--TODO: remove spaces from mail address-->
-<!--TODO: HAVE EVERY SUBPAGE START AT SAME HEIGHT (BLACK CONTAINER eg. like trainingsplätze & impressum etc) -->
+
 <Layout>
     <div class="flex grow flex-auto bg-[url(/Home_bg.jpg)] bg-cover">
         <div class="flex flex-col w-full px-6 pb-14 bg-[#cfe8fc80]">
@@ -32,17 +28,21 @@ import Carousel from '../components/Carousel.tsx';
                 </h6>
                 <p class="my-3">
                     Mädchen und Burschen im Alter von 10 bis 15 spielen in unserem
-                    Team "Privateers". Die Jugendmannschaft des Vereins trainiert
+                    Team "Privateers".
+                    <br/>
+                    Die Jugendmannschaft des Vereins trainiert
                     einmal pro Woche und nimmt an zahlreichen Turnieren im Jahr teil.
                 </p>
                 <p class="my-3">
                     Alle, die einen fairen Teamsport ausüben möchten, sind bei uns
-                    herzlich willkommen! Du suchst ein Frisbee-Team in Mödling? Melde
-                    dich bei uns (
-                    <a href="mailto:info@winonaraiders.org" class="underline text-cyan-500 hover:text-cyan-700 visited:text-purple-600">
-                        info@winonaraiders.org
-                    </a>
-                    ) und schau vorbei, wir freuen uns auf dich!
+                    herzlich willkommen!
+                    <br/>
+                    Du suchst ein Frisbee-Team in Mödling? Melde dich bei uns
+                    (<a
+                        href="mailto:info@winonaraiders.org"
+                        class="underline text-cyan-500 hover:text-cyan-700 visited:text-purple-600"
+                    >info@winonaraiders.org</a>)
+                    und schau vorbei, wir freuen uns auf dich!
                 </p>
             </div>
         </div>
