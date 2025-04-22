@@ -86,7 +86,7 @@ export default function Carousel({folder}: imageLocationProps) {
                         className="w-full h-full object-cover"
                         width={800}
                         height={350}
-                        loading="lazy"
+                        loading="eager"
                         draggable={false}
                     />
                 )}
