@@ -1,3 +1,4 @@
+![publish website](https://github.com/Jususs/winona-raiders-website-dev/workflows/CI/badge.svg)
 ## Tech Stack
 
 Astro, React and Tailwind - Keenslider for the carousel
