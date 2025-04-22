@@ -7,6 +7,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://jususs.github.io/winona-raiders-website-dev/',
   base: '/winona-raiders-website-dev/',
   integrations: [react()],
 
