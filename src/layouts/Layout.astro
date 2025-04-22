@@ -1,6 +1,5 @@
 ---
 import "../styles/global.css";
-import { Image } from 'astro:assets';
 import Footer  from '../components/Footer.astro';
 
 const currentPath = Astro.url.pathname;
@@ -29,7 +28,7 @@ const navLinks = [
 
             <div class="flex ml-6 mt-1 mb-3 items-center">
                 <a class="h-10 w-10 mx-2" href="https://www.instagram.com/winona_raiders/">
-                    <Image height={40} width={40} loading="eager" alt="instagram link" src="/instagram_logo.png"/>
+                    <img width={40} height={40} loading="eager" src="/instagram_logo.png" alt="instagram link"/>
                 </a>
             </div>
         </div>
