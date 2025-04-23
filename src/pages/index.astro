@@ -4,47 +4,43 @@ import Carousel from '../components/Carousel.tsx';
 ---
 
 <Layout>
-    <div class="flex grow flex-auto bg-[url(/winona-raiders-website-dev/Home_bg.jpg)] bg-cover">
-        <div class="flex flex-col w-full px-6 pb-14 bg-[#cfe8fc80]">
-            <Carousel folder="gallery" client:load />
-            <div class="max-w-[800px] mt-2 md:mt-4 p-6 self-center text-white font-raiders bg-[#000000b3]">
-                <p class="my-3">
-                    Wir sind ein 1995 gegründetes Ultimate Frisbee Team aus Mödling.
-                    Unsere gut 40 aktiven Mitglieder vereint die Begeisterung am Sport
-                    mit der Frisbeescheibe. <br /><br />
-                    Der Verein umfasst folgende Teams:
-                </p>
-                <h6 class="pt-6 text-xl font-medium">
-                    Winona Raiders
-                </h6>
-                <p class="my-3">
-                    Die Kampfmannschaft des Vereins trainiert zweimal pro Woche und
-                    bereitet sich so nicht nur auf zahlreiche Turniere sondern auch
-                    auf das Highlight der Saison, die Österreichischen Beach
-                    Staatsmeisterschaften in Bibione, vor.
-                </p>
-                <h6 class="pt-6 text-xl font-medium">
-                    Privateers
-                </h6>
-                <p class="my-3">
-                    Mädchen und Burschen im Alter von 10 bis 15 spielen in unserem
-                    Team "Privateers".
-                    <br/>
-                    Die Jugendmannschaft des Vereins trainiert
-                    einmal pro Woche und nimmt an zahlreichen Turnieren im Jahr teil.
-                </p>
-                <p class="my-3">
-                    Alle, die einen fairen Teamsport ausüben möchten, sind bei uns
-                    herzlich willkommen!
-                    <br/>
-                    Du suchst ein Frisbee-Team in Mödling? Melde dich bei uns
-                    (<a
-                        href="mailto:info@winonaraiders.org"
-                        class="underline text-cyan-500 hover:text-cyan-700 visited:text-purple-600"
-                    >info@winonaraiders.org</a>)
-                    und schau vorbei, wir freuen uns auf dich!
-                </p>
-            </div>
-        </div>
+    <Carousel folder="gallery" client:load/>
+    <div class="max-w-[800px] mt-2 md:mt-4 p-6 self-center text-white font-raiders bg-[#000000b3]">
+        <p class="my-3">
+            Wir sind ein 1995 gegründetes Ultimate Frisbee Team aus Mödling.
+            Unsere gut 40 aktiven Mitglieder vereint die Begeisterung am Sport
+            mit der Frisbeescheibe. <br/><br/>
+            Der Verein umfasst folgende Teams:
+        </p>
+        <h6 class="pt-6 text-xl font-medium">
+            Winona Raiders
+        </h6>
+        <p class="my-3">
+            Die Kampfmannschaft des Vereins trainiert zweimal pro Woche und
+            bereitet sich so nicht nur auf zahlreiche Turniere sondern auch
+            auf das Highlight der Saison, die Österreichischen Beach
+            Staatsmeisterschaften in Bibione, vor.
+        </p>
+        <h6 class="pt-6 text-xl font-medium">
+            Privateers
+        </h6>
+        <p class="my-3">
+            Mädchen und Burschen im Alter von 10 bis 15 spielen in unserem
+            Team "Privateers".
+            <br/>
+            Die Jugendmannschaft des Vereins trainiert
+            einmal pro Woche und nimmt an zahlreichen Turnieren im Jahr teil.
+        </p>
+        <p class="my-3">
+            Alle, die einen fairen Teamsport ausüben möchten, sind bei uns
+            herzlich willkommen!
+            <br/>
+            Du suchst ein Frisbee-Team in Mödling? Melde dich bei uns
+            (<a
+                href="mailto:info@winonaraiders.org"
+                class="underline text-cyan-500 hover:text-cyan-700 visited:text-purple-600"
+            >info@winonaraiders.org</a>)
+            und schau vorbei, wir freuen uns auf dich!
+        </p>
     </div>
 </Layout>
