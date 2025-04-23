@@ -18,24 +18,26 @@ const navLinks = [
         <meta charset="UTF-8" />
         <meta name="viewport" />
         <link rel="icon" href="/winona-raiders-website-dev/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Website of the Ultimate Frisbee Team Winona Raiders" />
         <title>Winona Raiders</title>
     </head>
     <body class="flex flex-col min-h-screen">
     <div class="bg-[#333333] text-white">
-        <div class="flex flex-row justify-center items-center">
+        <div class="flex flex-col md:flex-row justify-center items-center">
 
             <h1 class="ml-6 mt-1 mb-3 text-center uppercase text-3xl font-raiders font-medium">Ultimate Frisbee Mödling</h1>
 
             <div class="flex ml-6 mt-1 mb-3 items-center">
                 <a class="h-10 w-10 mx-2" href="https://www.instagram.com/winona_raiders/">
-                    <img width={40} height={40} loading="eager" src="/winona-raiders-website-dev/instagram_logo.png" alt="instagram link"/>
+                    <img width={40} height={40} loading="eager" src="/instagram_logo.png" alt="instagram link"/> <!--TODO: REMOVE THIS BEFORE PUBLISH TO RAIDERS WEBSITE-->
                 </a>
             </div>
         </div>
 
         <nav class="flex w-full items-center justify-around text-center uppercase text-[0.9rem] font-raiders">
             {navLinks.map(({ label, href }) => (
-                <a href={href} class={`flex-1 p-3 hover:text-white ${currentPath === href ? 'underline underline-offset-5 text-white' : 'text-gray-400'}`}>
+                <a href={href} class={`px-1 md:px-3 py-3 hover:text-white ${currentPath === href ? 'underline underline-offset-5 text-white' : 'text-gray-400'}`}>
                     { label }
                 </a>
             ))}

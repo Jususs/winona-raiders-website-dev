@@ -4,37 +4,37 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout>
     <div class="flex grow flex-auto bg-[url(/Home_bg.jpg)] bg-cover">
-        <div class="flex flex-col w-full px-6 bg-[#cfe8fc80]">
-            <div class="max-w-[800px] m-10 p-6 self-center text-white font-raiders bg-[#000000b3]">
+        <div class="flex flex-col w-full px-6 pt-10 pb-14 bg-[#cfe8fc80]">
+            <div class="max-w-[800px] p-0 md:p-6 self-center text-white font-raiders bg-[#000000b3]">
                 <h6 class="mt-3 mb-6 text-2xl font-bold text-center">
                     Trainingsplätze
                 </h6>
-                <p class="mb-6 text-sm text-center">
+                <p class="mb-6 px-3 text-xs md:text-sm text-center">
                     Je nach Jahreszeit, Witterung und Verfügbarkeit trainieren wir auf folgenden Plätzen
                 </p>
                 <table>
                     <thead>
-                        <tr class="border-b">
-                            <th class="p-7">Was</th>
-                            <th class="p-7">Wo</th>
-                            <th class="p-7">Google Maps</th>
+                        <tr class="border-b text-sm md:text-base text-center">
+                            <th class="p-3 md:p-7">Was</th>
+                            <th class="p-3 md:p-7">Wo</th>
+                            <th class="p-3 md:p-7">Google Maps</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="border-b">
-                            <td class="p-7">
-                                <div class="flex flex-col font-semibold items-center justify-center">
+                        <tr class="border-b text-sm md:text-base text-center">
+                            <td class="p-3 md:p-7">
+                                <div class="flex flex-col font-semibold">
                                     Hallentraining
                                 </div>
                             </td>
-                            <td class="p-7">
-                                <div class="flex flex-col items-center justify-center">
+                            <td class="p-3 py-5 md:p-7">
+                                <div class="flex flex-col">
                                     <div>Sportgymnasium</div>
                                     <div>Gießhüblerstraße 37-39</div>
                                     <div>2344 Maria Enzersdorf</div>
                                 </div>
                             </td>
-                            <td class="p-7">
+                            <td class="p-3 md:p-7">
                                 <div class="flex flex-col items-center justify-center">
                                     <a class="h-10 w-10" href="https://maps.app.goo.gl/yo5KX5vPjPitxveD7">
                                         <img class="h-10 w-10" src="/winona-raiders-website-dev/Google_Maps_icon.svg" alt="Google Maps Link Sportgymnasium Maria Enzersdorf"/>
@@ -43,32 +43,32 @@ import Layout from "../layouts/Layout.astro";
                             </td>
                         </tr>
                         <tr>
-                            <td class="p-7">
-                                <div class="flex flex-col font-semibold items-center justify-center">
+                            <td class="p-3 md:p-7">
+                                <div class="flex flex-col text-sm md:text-base text-center font-semibold">
                                     Outdoortraining
                                 </div>
                             </td>
-                            <td class="p-7">
-                                <div class="flex flex-col gap-8">
-                                    <div class="flex flex-col items-center justify-center">
+                            <td class="p-3 py-5 md:p-7">
+                                <div class="flex flex-col text-sm md:text-base text-center gap-8">
+                                    <div class="flex flex-col">
                                         <div>ASK Eichkogel</div>
                                         <div>Doktor Karl Renner Straße 11b</div>
                                         <div>2353 Guntramsdorf</div>
                                     </div>
-                                    <div class="flex flex-col items-center justify-center">
+                                    <div class="flex flex-col">
                                         <div>ÖTB</div>
                                         <div>Dr. Karl Giannoni Gasse 18</div>
                                         <div>2340 Mödling</div>
                                     </div>
-                                    <div class="flex flex-col items-center justify-center">
+                                    <div class="flex flex-col">
                                         <div>SEV Isovolta</div>
                                         <div>Isovoltastraße 45</div>
                                         <div>2355 Wr. Neudorf</div>
                                     </div>
                                 </div>
                             </td>
-                            <td class="p-7">
-                                <div class="flex flex-col items-center justify-center gap-8">
+                            <td class="p-3 pt-5 md:p-7">
+                                <div class="flex flex-col items-center justify-center gap-11 sm:gap-8">
                                     <a class="h-10 w-10" href="https://maps.app.goo.gl/fHsLNZakwGxQQQNXA">
                                         <img class="h-10 w-10" src="/winona-raiders-website-dev/Google_Maps_icon.svg" alt="Google Maps Link ASK Eichkogel"/>
                                     </a>

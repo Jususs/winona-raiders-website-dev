@@ -78,37 +78,39 @@ export default function Carousel({folder}: imageLocationProps) {
 
     return (
         <>
-            <div className="w-full max-w-[800px] h-[350px] mb-2 self-center">
-                {!loaded && images.length > 0 && (
-                    <img
-                        src={images[0]}
-                        alt="Carousel placeholder"
-                        className="w-full h-full object-cover"
-                        width={800}
-                        height={350}
-                        loading="eager"
-                        draggable={false}
-                    />
-                )}
+            <div className="w-full max-w-[800px] mb-2 self-center">
+                <div className="w-full aspect-[800/350] overflow-hidden">
+                    {!loaded && images.length > 0 && (
+                        <img
+                            src={images[0]}
+                            alt="Carousel placeholder"
+                            className="w-full h-full object-cover object-center"
+                            width={800}
+                            height={350}
+                            loading="eager"
+                            draggable={false}
+                        />
+                    )}
 
-                <div
-                    ref={sliderRef}
-                    className={`keen-slider w-full h-full ${loaded ? 'opacity-100' : 'opacity-0'}`}
-                    // style={{ transition: 'opacity 0.5s ease' }}
-                >
-                    {images.map((src, idx) => (
-                        <div className="keen-slider__slide" key={idx}>
-                            <img
-                                src={src}
-                                alt={`Slide ${idx + 1}`}
-                                className="w-full h-full object-cover"
-                                width={800}
-                                height={350}
-                                loading="lazy"
-                                draggable={false}
-                            />
-                        </div>
-                    ))}
+                    <div
+                        ref={sliderRef}
+                        className={`keen-slider w-full h-full ${loaded ? 'opacity-100' : 'opacity-0'}`}
+                        // style={{ transition: 'opacity 0.5s ease' }}
+                    >
+                        {images.map((src, idx) => (
+                            <div className="keen-slider__slide" key={idx}>
+                                <img
+                                    src={src}
+                                    alt={`Carousel Slide ${idx + 1}`}
+                                    className="w-full h-full object-cover object-center"
+                                    width={800}
+                                    height={350}
+                                    loading="lazy"
+                                    draggable={false}
+                                />
+                            </div>
+                        ))}
+                    </div>
                 </div>
 
                 {loaded && instanceRef.current && (
@@ -117,7 +119,7 @@ export default function Carousel({folder}: imageLocationProps) {
                             <button
                                 key={idx}
                                 onClick={() => instanceRef.current?.moveToIdx(idx)}
-                                className={`w-3 h-3 rounded-full ${currentSlide === idx ? 'scale-150 bg-black hover:cursor-pointer' : 'bg-gray-500 hover:cursor-pointer hover:scale-125'}`}
+                                className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full ${currentSlide === idx ? 'scale-150 bg-black hover:cursor-pointer' : 'bg-gray-500 hover:cursor-pointer hover:scale-125'}`}
                             />
                         ))}
                     </div>
